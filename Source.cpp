@@ -6,43 +6,19 @@
 
 int main()
 {
-	std::cout << "Hello World ! Time to fight !" << std::endl;
+	
 
 	Mage Hector("Hector");
 	Ennemy Titan;
 	Character Charac;
-	
-	Hector.FireBall();
+
+	Hector.FireBall(Titan);
+	Hector.PrimordialExplosion(Titan);
+
+	Titan.DivinePunition(Hector);
+	Titan.TectonicHit(Hector);
 
 	Charac.Status();
-	std::cin.ignore();
-
-	Hector.PrimordialExplosion();
-	
-	Charac.Status();
-	std::cin.ignore();
-
-	Hector.Healing();
-
-	Charac.Status();
-	std::cin.ignore();
-	
-	/*-----------------------------*/
-
-	Titan.DivinePunition();
-
-	Charac.Status();
-	std::cin.ignore();
-
-	Titan.TectonicHit();
-
-	Charac.Status();
-	std::cin.ignore();
-	
-	Titan.TitanJudgement();
-
-	Charac.Status();
-	std::cin.ignore();
 
 	/*------------------------------*/
 

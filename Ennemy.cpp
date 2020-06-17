@@ -1,22 +1,26 @@
 #include "Ennemy.h"
 #include <iostream>
 
+/*Constructeur*/
+
 Ennemy::Ennemy() : m_Name("Titan")
 {
 }
 
-void const Ennemy::TectonicHit()
+/*Compétences ennemies*/
+
+void Ennemy::TectonicHit(Character& target)
 {
-	m_KindLife -= 2;
+	target.GetKindDamage(3);
 }
 
-void const Ennemy::DivinePunition()
+void Ennemy::DivinePunition(Character& target)
 {
-	m_KindLife -= 5;
+	target.GetKindDamage(5);
 }
 
-void const Ennemy::TitanJudgement()
+void Ennemy::TitanJudgement(Character& target)
 {
-	m_KindLife -= 7;
+	target.GetKindDamage(7);
 }
 

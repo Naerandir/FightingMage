@@ -4,11 +4,20 @@
 
 class Ennemy : public Character
 {
+
+	/*Donner un nom a l'ennemi*/
+
 	std::string m_Name;
 
 public:
+
+	/*constructeur*/
+
 	Ennemy();
-	void const TectonicHit();
-	void const DivinePunition();
-	void const TitanJudgement();
+	
+	/*Compétences de l'ennemi*/
+
+	void TectonicHit(Character& target);
+	void DivinePunition(Character& target);
+	void TitanJudgement(Character& target);
 };

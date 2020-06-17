@@ -1,26 +1,30 @@
 #include "Mage.h"
 #include <iostream>
 
-Mage::Mage(std::string MageName) : m_MageMana(50), m_MageShield(0)
+/*Constructeur*/
+
+Mage::Mage(std::string MageName) : m_MageMana(50)
 {
 
 }
 
-void const Mage::FireBall()
+/*Compétences du mage*/
+
+void Mage::FireBall(Character& target)
 {
-	m_EvilLife -= 10;
+	target.GetEvilDamage(10);
 	m_MageMana -= 5;
 }
 
-void const Mage::PrimordialExplosion()
+void Mage::PrimordialExplosion(Character& target)
 {
-	m_EvilLife -= 25;
+	target.GetEvilDamage(25);
 	m_MageMana -= 25;
 }
 
-void const Mage::Healing()
+void Mage::Healing(Character& target)
 {
-	m_KindLife += 10;
+	target.GetKindHeal(10);
 	m_MageMana += 10;
 }
 

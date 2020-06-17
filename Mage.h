@@ -5,14 +5,20 @@
 
 class Mage : public Character
 {
+	/*Les stats du mage*/
 
 	int m_MageMana;
-	int m_MageShield;
 
 public:
+
+	/*constructeur*/
+
 	Mage(std::string MageName);
-	void const FireBall();
-	void const PrimordialExplosion();
-	void const Healing();
+
+	/*Compétence du mage*/
+
+	void FireBall(Character &target);
+	void PrimordialExplosion(Character& target);
+	void Healing(Character& target);
 
 };
